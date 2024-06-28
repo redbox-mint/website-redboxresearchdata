@@ -1,0 +1,60 @@
+<header data-bs-theme="light">
+    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ site.baseurl }}{% link index.md %}">
+                <img src="{{ '/static/images/redbox-logo-nobg-open-180.png' | relative_url }}"
+                     class="d-inline-block align-text-top" alt="ReDBox logo" style="max-width: 30px;">
+                ReDBox
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ site.baseurl }}{% link index.md %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}{% link get-redbox.md %}">Get ReDBox</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{ site.baseurl }}{% link features.md %}" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Features
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ site.baseurl }}{% link features.md %}">Overview</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="{{ site.baseurl }}{% link features/feature-1.md %}">Feature 1</a></li>
+                            <li><a class="dropdown-item" href="{{ site.baseurl }}{% link features/feature-2.md %}">Feature 2</a></li>
+                            <li><a class="dropdown-item" href="{{ site.baseurl }}{% link features/feature-3.md %}">Feature 3</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{ site.baseurl }}{% link data-lifecycle.md %}" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Data Lifecycle
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ site.baseurl }}{% link data-lifecycle.md %}">Overview</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="{{ site.baseurl }}{% link data-lifecycle/plan.md %}">Plan</a></li>
+                            <li><a class="dropdown-item" href="{{ site.baseurl }}{% link data-lifecycle/create.md %}">Create</a></li>
+                            <li><a class="dropdown-item" href="{{ site.baseurl }}{% link data-lifecycle/publish.md %}">Publish</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}{% link users.md %}">Current users</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}{% link news.md %}">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}{% link events.md %}">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}{% link credits.md %}">Credits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}{% link support.md %}">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}{% link contact.md %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

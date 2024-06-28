@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    {% include html_head.html %}
+
+    <link href="{{ '/static/css/style.css' | relative_url }}" rel="stylesheet">
+</head>
+<body>
+
+{% include html_body_nav.html %}
+
+<main>
+    {{ content }}
+
+    {% include html_body_footer.html %}
+</main>
+
+{% include html_end.html %}
+
+</body>
+</html>
+
