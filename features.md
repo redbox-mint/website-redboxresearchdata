@@ -29,6 +29,8 @@ The
 leads the ReDBox development initiative and
 provides several services including a support subscription service to institutions.
 
+{% include most_recent_release.html %}
+
 ## A few key features
 
 - Solutions for managing, describing and sharing research data collections
