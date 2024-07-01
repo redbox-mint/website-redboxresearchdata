@@ -60,3 +60,7 @@ exclude:
   - .idea/
   - .support/
   - .support/rblatest.json
+  - package.json
+  - package-lock.json
+  - LICENSE.txt
+  - README.md

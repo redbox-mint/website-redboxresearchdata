@@ -1,6 +1,6 @@
 ---
 layout: page_general
-permalink: /rbdlc/
+permalink: /rbdlc
 title: Data Life Cycle
 excerpt: Research Data Life Cycle Framework
 ---

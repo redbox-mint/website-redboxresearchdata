@@ -1,6 +1,6 @@
 ---
 layout: page_general
-permalink: /create/
+permalink: /create
 title: Create
 excerpt: Creating Data with ReDBox
 ---

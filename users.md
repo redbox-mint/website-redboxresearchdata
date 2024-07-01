@@ -1,6 +1,6 @@
 ---
 layout: page_general
-permalink: /rbusers/
+permalink: /rbusers
 title: Users
 excerpt: Who Uses ReDBox?
 ---

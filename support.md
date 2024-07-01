@@ -1,6 +1,6 @@
 ---
 layout: page_general
-permalink: /support/
+permalink: /support
 title: Support
 excerpt: Options for getting help
 ---

@@ -1,6 +1,6 @@
 ---
 layout: page_general
-permalink: /contact/
+permalink: /contact
 title: Contact
 excerpt: How to get in touch with us
 ---

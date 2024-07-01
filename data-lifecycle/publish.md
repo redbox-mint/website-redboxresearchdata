@@ -1,6 +1,6 @@
 ---
 layout: page_general
-permalink: /publish/
+permalink: /publish
 title: Publish
 excerpt: Publish with ReDBox
 ---
