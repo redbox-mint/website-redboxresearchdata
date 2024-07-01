@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-# From: https://github.com/actions/starter-workflows/blob/647cac4f347894582e3fd841b84b0b2c6485b23d/pages/jekyll-gh-pages.yml
+# From: https://github.com/actions/starter-workflows/blob/647cac4f347894582e3fd841b84b0b2c6485b23d/pages/jekyll.yml
 
 name: Deploy website
 
@@ -30,11 +30,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.7
 
       - name: Cache ReDBox latest release files
         id: cache-redbox-latest-release-file
-        uses: actions/cache@v3
+        uses: actions/cache@v4.0.2
         env:
           cache-name: cache-redbox-latest-release-file
         with:
@@ -51,9 +51,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
           cache: 'npm'
@@ -69,19 +69,28 @@ jobs:
       - static-files
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.7
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+           # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
+          # Increment this number if you need to re-download cached gems
+          cache-version: 0
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v5.0.0
 
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+        # Outputs to the './_site' directory by default
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.0.1
 
   # Deployment job
   deploy:
@@ -93,4 +102,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
