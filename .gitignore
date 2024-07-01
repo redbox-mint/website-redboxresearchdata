@@ -1,6 +1,9 @@
-out/
-node_modules/
-docpad-debug.log
-yarn.lock
-.project
+_site/
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+Gemfile.lock
 .idea/
+node_modules/
+.support/rblatest.json

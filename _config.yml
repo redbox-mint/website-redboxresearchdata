@@ -1,0 +1,66 @@
+# Jekyll config
+
+# Settings from GitHub pages that cannot be changed.
+# Ref: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
+
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# Website-specific settings
+
+title: ReDBox
+
+email: info@redboxresearchdata.com.au
+
+description: >-
+  ReDBox is an open source Research Data Management platform that assists
+  researchers and institutions to plan, create and publish their research data assets.
+
+# if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+domain: 'redbox-mint.github.io'
+
+# https://my-site.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+# the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://my-site.github.io'
+
+# /REPOSITORY-NAME/      # place folder name if the site is served in a subfolder
+# the subpath of your site, e.g. /blog
+baseurl: '/website-redboxresearchdata'
+
+github_username: redbox-mint
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+whitelist:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .gitignore
+  - .idea/
+  - .support/
+  - .support/rblatest.json
+  - package.json
+  - package-lock.json
+  - LICENSE.txt
+  - README.md
