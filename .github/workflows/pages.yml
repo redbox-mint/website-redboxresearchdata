@@ -34,7 +34,7 @@ jobs:
 
       - name: Cache ReDBox latest release files
         id: cache-redbox-latest-release-file
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-redbox-latest-release-file
         with:
