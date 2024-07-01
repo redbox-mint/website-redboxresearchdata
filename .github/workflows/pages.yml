@@ -1,7 +1,7 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 # From: https://github.com/actions/starter-workflows/blob/647cac4f347894582e3fd841b84b0b2c6485b23d/pages/jekyll-gh-pages.yml
 
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy website
 
 on:
   # Runs on pushes targeting the default branch
@@ -23,21 +23,50 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# TODO: get latest release and write an include file to _includes/most_recent_release.html
-# curl -L -o output _includes/most_recent_release.html \
-#  -H "Accept: application/vnd.github+json" \
-#  -H "X-GitHub-Api-Version: 2022-11-28" \
-#  https://api.github.com/repos/redbox-mint/redbox-portal/releases/latest
-
-# jq -r '.tag_name'
-# jq -r '.html_url'
-# jq -r '.published_at | fromdateiso8601 | strftime("%a, %-d %B %Y")'
-# e.g. The [most recent ReDBox version is <tag_name>](<html_url>) released on [<published_at>].
-
 jobs:
-  # Build job
+  # Generate an include file showing details for
+  # the latest ReDBox release.
+  recent-redbox-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache ReDBox latest release files
+        id: cache-redbox-latest-release-file
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-redbox-latest-release-file
+        with:
+          path: |
+            .support/rblatest.json
+            _includes/latest_release.html
+          key: cache-redbox-latest-release-file
+
+      - if: ${{ steps.cache-redbox-latest-release-file.outputs.cache-hit != 'true' }}
+        name: Create latest ReDBox release details if not cached
+        run: .support/generate_latest_release_info.sh
+
+  static-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Update the static files
+        run: .support/update_static_files.sh
+
+  # Build and upload the GitHub Pages artifact.
   build:
     runs-on: ubuntu-latest
+    needs:
+      - recent-redbox-release
+      - static-files
     steps:
       - name: Checkout
         uses: actions/checkout@v4

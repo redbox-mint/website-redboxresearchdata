@@ -18,7 +18,7 @@ in the development and testing of the release cycles.
 It also means that any development performed for a specific client 
 will be contributed back to the code base to the benefit of all (see Project Services).
 
-{% include most_recent_release.html %}
+{% include latest_release.html %}
 
 ## Community Support
 

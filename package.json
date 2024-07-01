@@ -1,0 +1,15 @@
+{
+  "name": "website-redboxresearchdata",
+  "version": "1.0.0",
+  "description": "The source code for the  ReDBox public information website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  }
+}
