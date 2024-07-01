@@ -24,42 +24,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Generate an include file showing details for
-  # the latest ReDBox release.
-  recent-redbox-release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.7
-
-      - name: Cache ReDBox latest release files
-        id: cache-redbox-latest-release-file
-        uses: actions/cache@v4.0.2
-        env:
-          cache-name: cache-redbox-latest-release-file
-        with:
-          path: |
-            .support/rblatest.json
-            _includes/latest_release.html
-          key: cache-redbox-latest-release-file
-
-      - if: ${{ steps.cache-redbox-latest-release-file.outputs.cache-hit != 'true' }}
-        name: Create latest ReDBox release details if not cached
-        run: .support/generate_latest_release_info.sh
-
-  static-files:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.7
-
-      - uses: actions/setup-node@v4.0.2
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Update the static files
-        run: .support/update_static_files.sh
 
   # Build and upload the GitHub Pages artifact.
   build:
@@ -70,6 +34,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.7
+
+      # Generate an include file showing details for
+      # the latest ReDBox release.
+      - name: Cache modified files
+        id: cache-modified-files
+        uses: actions/cache@v4.0.2
+        env:
+          cache-name: cache-modified-files
+        with:
+          path: |
+            .support/rblatest.json
+            _includes/latest_release.html
+            static/js/bootstrap.bundle.min.js
+            static/css/bootstrap.min.css
+            static/css/bootstrap-icons.min.css
+            static/css/fonts/bootstrap-icons.woff
+            static/css/fonts/bootstrap-icons.woff2
+          key: cache-modified-files
+
+      - if: ${{ steps.cache-redbox-latest-release-file.outputs.cache-hit != 'true' }}
+        name: Create latest ReDBox release details if not cached
+        run: .support/generate_latest_release_info.sh
+
+      - uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Update the static files
+        run: .support/update_static_files.sh
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -85,11 +79,12 @@ jobs:
 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
       - name: Upload artifact
+        if: ${{ ! startsWith(github.ref, 'refs/heads/dependabot') }}
         uses: actions/upload-pages-artifact@v3.0.1
 
   # Deployment job
@@ -99,6 +94,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
+    if: ${{ ! startsWith(github.ref, 'refs/heads/dependabot') }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

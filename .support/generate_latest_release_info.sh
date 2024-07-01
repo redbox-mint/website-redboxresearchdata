@@ -5,12 +5,10 @@ set -euo pipefail
 DATA_FILE=.support/rblatest.json
 HTML_FILE=_includes/latest_release.html
 
-if [ ! -f "${DATA_FILE}" ]; then
-  curl --silent -L -o "${DATA_FILE}" \
-    -H "Accept: application/vnd.github+json" \
-    -H "X-GitHub-Api-Version: 2022-11-28" \
-    https://api.github.com/repos/redbox-mint/redbox-portal/releases/latest
-fi
+curl --silent -L -o "${DATA_FILE}" \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  https://api.github.com/repos/redbox-mint/redbox-portal/releases/latest
 
 VERSION=$(jq -r '.tag_name' "${DATA_FILE}")
 URL=$(jq -r '.html_url' "${DATA_FILE}")
