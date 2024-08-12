@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Find the current github-pages version: https://pages.github.com/versions/
-gem "github-pages", "~> 231", group: :jekyll_plugins
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # more recent versions of ruby do not have webrick pre-installed, so install it
 gem "webrick", "~> 1.8"
