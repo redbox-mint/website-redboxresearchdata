@@ -19,7 +19,9 @@ then allowing users to extract manifests of data back into ReDBox and publishing
 alongside the data collection metadata.
 alongside the data collection metadata.
 
-![How ReDBox supports the DCC Curation Life Cycle]({{ '/static/images/curationlifecycle.png' | relative_url }})
+<img src="{{ '/static/images/curationlifecycle.png' | relative_url }}" 
+class="img-fluid border" 
+alt="How ReDBox supports the DCC Curation Life Cycle">
 
 How ReDBox supports the DCC Curation Life Cycle
 
@@ -54,14 +56,16 @@ In the initial release, these services will include GitLab code repositories, OM
 LabArchive electronic lab notebooks. In ReDBox, the researcher can then manage that workspace with a variety of 
 functions, including:
 
-    sharing a workspace (a directory, site or project belonging to a researcher in a particular tool) with other researchers
-    setting a workspace to be immutable (read-only)
-    making a workspace from one tool available in a different research tool.
+- sharing a workspace (a directory, site or project belonging to a researcher in a particular tool) with other researchers
+- setting a workspace to be immutable (read-only)
+- making a workspace from one tool available in a different research tool.
 
 Future Provisioner development is expected to support many more useful processes, including data archiving 
 and data publication.
 
-![The UTS Provisioner links services to their Stash research data management platform via workspaces]({{ '/static/images/provisioner.jpg' | relative_url }})
+<img src="{{ '/static/images/provisioner.jpg' | relative_url }}"
+class="img-fluid border"
+alt="The UTS Provisioner links services to their Stash research data management platform via workspaces">
 
 The UTS Provisioner links services to their Stash research data management platform via workspaces
 
@@ -87,6 +91,9 @@ including planning, provisioning, data harvesting and publishing. It will give i
 into how researchers manage and publish their data while providing assurances that researcher practices conform
 to Australian standards and expectations.
 
-![The UTS Provisioner links services to their Stash research data management platform via workspaces]({{ '/static/images/rbdlc.jpg' | relative_url }})
+<img src="{{ '/static/images/rbdlc.jpg' | relative_url }}"
+class="img-fluid border"
+alt="The UTS Provisioner links services to their Stash research data management platform via workspaces">
+
 
 ReDBox is a complete data management system for supporting the Research Data Life Cycle Framework
