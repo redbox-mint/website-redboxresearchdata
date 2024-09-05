@@ -11,7 +11,7 @@ ReDBox is primarily used by Australian universities to capture and publish the m
 
 However, ReDBox is a solution for any organisation that needs to manage and publish data collections.
 
-Have a look at your [options to get ReDBox]({ site.baseurl }}{% link support.md %}).
+Have a look at your [options to get ReDBox]({{ site.baseurl }}{% link support.md %}).
 
 {% include latest_release.html %}
 
@@ -31,10 +31,10 @@ and publishing data to shared resource repositories, or open data portals.
 
 ### ReDBox in action
 
-See [who is using ReDBox]({ site.baseurl }}{% link users.md %}).
+See [who is using ReDBox]({{ site.baseurl }}{% link users.md %}).
 
 ### ReDBox Community Users and Supporters
 
 ReDBox is supported by a strong community of Australian universities and institutions.
 
-Are you ready to [explore how ReDBox can support your organisation]({ site.baseurl }}{% link support.md %})?
+Are you ready to [explore how ReDBox can support your organisation]({{ site.baseurl }}{% link support.md %})?
