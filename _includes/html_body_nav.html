@@ -38,20 +38,26 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
+
+                            <li>
+                                <a class="dropdown-item {% if page.url == '/features/configurable-forms' %}active{% endif %}"
+                                   {% if page.url == '/features/configurable-forms' %}aria-current="page"{% endif %}
+                                href="{{ site.baseurl }}{% link features/configurable-forms.md %}">Custom Forms</a>
+                            </li>
                             <li>
                                 <a class="dropdown-item {% if page.url == '/features/integration-options' %}active{% endif %}"
                                    {% if page.url == '/features/integration-options' %}aria-current="page"{% endif %}
                                    href="{{ site.baseurl }}{% link features/integration-options.md %}">Integration Options</a>
                             </li>
                             <li>
-                                <a class="dropdown-item {% if page.url == '/features/reporting' %}active{% endif %}"
-                                   {% if page.url == '/features/reporting' %}aria-current="page"{% endif %}
-                                   href="{{ site.baseurl }}{% link features/reporting.md %}">Reporting</a>
-                            </li>
-                            <li>
                                 <a class="dropdown-item {% if page.url == '/features/workspaces' %}active{% endif %}"
                                    {% if page.url == '/features/workspaces' %}aria-current="page"{% endif %}
                                    href="{{ site.baseurl }}{% link features/workspaces.md %}">Workspaces</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {% if page.url == '/features/reporting' %}active{% endif %}"
+                                   {% if page.url == '/features/reporting' %}aria-current="page"{% endif %}
+                                href="{{ site.baseurl }}{% link features/reporting.md %}">Reporting</a>
                             </li>
                         </ul>
                     </li>
@@ -83,11 +89,6 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link {% if page.url == '/rbusers' %}active{% endif %}"
-                           {% if page.url == '/rbusers' %}aria-current="page"{% endif %}
-                           href="{{ site.baseurl }}{% link users.md %}">Current users</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link {% if page.url == '/news' %}active{% endif %}"
                            {% if page.url == '/news' %}aria-current="page"{% endif %}

@@ -34,10 +34,12 @@ provides several services including a support subscription service to institutio
 ## A few key features
 
 - Solutions for managing, describing and sharing research data collections
-- Easy to use workflow and data entry forms
+- Easy to use workflow and [customisable data entry forms]({{ site.baseurl }}{% link features/configurable-forms.md %})
 - Administrators can create a variety of metadata formats
 - OAI-PMH feeds your collection metadata to various aggregators
-- Built on an extensible plug-in model that integrate ReDBox within your organisational infrastructure
+- Built on an extensible plug-in model that can [integrate ReDBox within your organisational infrastructure]({{ site.baseurl }}{% link features/integration-options.md %})
+- A range of options for [reporting and business intelligence]({ site.baseurl }}{% link features/reporting.md %})
+- Offers ways to [provision researcher services linked to ReDBox records]({ site.baseurl }}{% link features/workspaces.md %})
 
 ## Some benefits of ReDBox
 
