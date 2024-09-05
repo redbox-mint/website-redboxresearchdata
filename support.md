@@ -5,37 +5,21 @@ title: Support
 excerpt: Options for getting help
 ---
 
-## ReDBox is Open Source
-
-QCIF is proud to say that the ReDBox and Mint platforms are both Open Source software, 
-making them freely available for anyone to download, install and use.
-
-This means that while QCIF manages the development of these platforms, 
-we keep everything as transparent as possible.
-We rely upon the interaction of our community to prioritise new features and participate 
-in the development and testing of the release cycles.
-
-It also means that any development performed for a specific client 
-will be contributed back to the code base to the benefit of all (see Project Services).
-
-{% include latest_release.html %}
-
 ## Community Support
 
-The ReDBox and Mint systems are both open-source, 
-and you are free to download and install the systems as you please.
+There are a number of Community support avenues.
 
-Community support is available through:
-
-- [Our mailing list](https://groups.google.com/forum/#!forum/redbox-repo)
-- [Documentation](https://github.com/redbox-mint/redbox-portal/wiki)
-- Community Slack group
+- **[Slack community](https://redbox-community.slack.com)**: Participate in discussions and connect with other RedBox Portal users and developers.
+- **[Issue Tracker](https://github.com/redbox-mint/redbox-portal/issues)**: Report an issue or track the status of enhancement work.
+- **[Product Roadmap](https://github.com/orgs/redbox-mint/projects/3/views/2)**: See potential upcoming features.
+- **[ReDBox Portal API Documentation](https://redbox-mint.github.io/redbox-portal/additional-documentation/rest-api.html)**: Detailed information about the API endpoints and examples.
+- **[Technical Documentation](https://github.com/redbox-mint/redbox-portal/wiki)**: Information about the inner workings of ReDBox.
 
 ## QCIF Support Agreements
 
 QCIF provides support to institutions and organisations through an annual support arrangement.
 
-For a small annual fee QCIF will provide:
+For an annual fee QCIF will provide:
 
 - Direct support to the client to resolve technical defects
 - Access to QCIF's online support system through which to lodge support requests
@@ -48,6 +32,21 @@ By subscribing to our support agreement your annual fee funds ReDBox support and
 at the forefront of research data management technologies.
 
 Please [contact us]({{ site.baseurl }}{% link contact.md %}) to discuss a suitable support agreement.
+
+## ReDBox is Open Source
+
+QCIF is proud to say that the ReDBox platform is Open Source software,
+making it freely available for anyone to download, install and use.
+
+This means that while QCIF manages the development of the platform,
+we keep everything as transparent as possible.
+We rely upon the interaction of our community to prioritise new features and participate
+in the development and testing of the release cycles.
+
+It also means that any development performed for a specific client
+will be contributed back to the code base to the benefit of all.
+
+{% include latest_release.html %}
 
 ## Project Services
 
