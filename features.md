@@ -38,8 +38,8 @@ provides several services including a support subscription service to institutio
 - Administrators can create a variety of metadata formats
 - OAI-PMH feeds your collection metadata to various aggregators
 - Built on an extensible plug-in model that can [integrate ReDBox within your organisational infrastructure]({{ site.baseurl }}{% link features/integration-options.md %})
-- A range of options for [reporting and business intelligence]({ site.baseurl }}{% link features/reporting.md %})
-- Offers ways to [provision researcher services linked to ReDBox records]({ site.baseurl }}{% link features/workspaces.md %})
+- A range of options for [reporting and business intelligence]({{ site.baseurl }}{% link features/reporting.md %})
+- Offers ways to [provision researcher services linked to ReDBox records]({{ site.baseurl }}{% link features/workspaces.md %})
 
 ## Some benefits of ReDBox
 
