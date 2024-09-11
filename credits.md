@@ -19,8 +19,11 @@ The University of Newcastle has been a key member of the ReDBox community since 
 
 Some of the key software libraries that make ReDBox possible:
 
+TODO
+
+(e.g.)
+
 - Angular
 - Sails.js
 - Node.js
 - Ubuntu
-- Others...

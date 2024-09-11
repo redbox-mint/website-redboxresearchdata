@@ -56,6 +56,10 @@ specific projects. Several provisioner plugins are available for configuration:
 Additionally, many more plugins can be developed to extend the provisioning capabilities of 
 ReDBox, making it highly adaptable to various research needs and institutional requirements.
 
+<img src="{{ '/static/images/provisioner.jpg' | relative_url }}"
+class="img-fluid border rounded mx-auto d-block"
+alt="Diagram showing provisioners and example data flow.">
+
 ### Publishing Integrations
 
 ReDBox aids in the publishing of data by providing configurable workflows for review and 
