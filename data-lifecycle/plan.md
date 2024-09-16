@@ -5,20 +5,29 @@ title: Plan
 excerpt: Research Planning With ReDBox
 ---
 
-
 ## Research Data Management Plan
 
-The ReDBox Research Data Management Plan (RDMP) tool is integrated into the core ReDBox offering.
-The RDMP tool allows researchers to document how they plan to collect, store, secure and share their research data.
+The ReDBox Research Data Management Plan (RDMP) tool is a key feature integrated into the core ReDBox platform.
+It empowers researchers to effectively plan how they will collect, store, secure, and share their research data,
+ensuring compliance with institutional and funding requirements.
+With research data management planning increasingly emphasised across Australian universities,
+ReDBox offers customizable forms and workflows to assist researchers, supervisors, and administrators
+in creating, tracking, and approving RDMPs tailored to institutional needs.
 
-Research data management planning is now encouraged in all Australian Universities and ReDBox provides customisable 
-forms and workflows to assist researchers, supervisors and administrators in creating, tracking and approving RDMPs.
-
-ReDBox supports [Research Activity Identifiers (RAiDs)](https://raid.org/), allowing users to add existing RAiDs 
+ReDBox also supports
+[Research Activity Identifiers (RAiDs)](https://raid.org/),
+allowing users to seamlessly link existing RAiDs
 to a data management plan or create new RAiDs.
-The RAiD can be a key identifier to tie together the data management plan, the provisioned storage and the published data collection.
+These RAiDs serve as key identifiers that connect the research data management plan with the corresponding storage
+and published data collections, enhancing the traceability and organization of research outputs.
 
-QCIF provides the full ReDBox functionality in the Cloud using the Software as a Service (SaaS) model.
+Additionally, ReDBox has the capability to
+[mint DataCite Digital Object Identifiers (DOIs)](https://datacite.org/create-dois/),
+providing globally recognized, persistent identifiers for datasets.
+This feature allows researchers to publish their data with confidence,
+knowing it will be easily discoverable and citable in the academic community.
 
-[Get in touch]({{ site.baseurl }}{% link contact.md %})
-with the ReDBox team to find out how easily our RDMP tool can be adapted to the needs of your institution.
+QCIF offers the full ReDBox platform in the cloud through a Software as a Service (SaaS) model,
+providing institutions with a flexible and scalable solution.
+Contact the ReDBox team today to learn how our RDMP tool can be easily adapted to meet your
+institution's specific research data management requirements.

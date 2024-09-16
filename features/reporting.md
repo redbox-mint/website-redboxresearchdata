@@ -8,8 +8,8 @@ excerpt: There are many options for creating reports in ReDBox
 ## ReDBox Reporting
 
 ReDBox has been designed to capture metadata from a variety of sources to help institutions 
-manage research data. While the intention of the system isn’t to be a fully fledged 
-reporting/business intelligence (BI) tool, it’s important for the system to be able to 
+manage research data. While the intention of the system isn't to be a fully fledged 
+reporting/business intelligence (BI) tool, it's important for the system to be able to 
 provide some basic functionality as well as provide integration options for reporting tools 
 so that more complex reports can be created. This document outlines the options currently 
 available in ReDBox, how they can be used and any potential limitations with their approaches.
@@ -28,7 +28,7 @@ alt="Export record metadata by record type">
 
 
 The output produced contains all the metadata that is being captured in the system for each 
-record and there’s no ability to choose which fields are exported though this can be done as 
+record and there's no ability to choose which fields are exported though this can be done as 
 a post-processing task in the tool of your choice once the export is completed. 
 As the metadata stored in ReDBox is not 
 "[flat](https://www.techtarget.com/searchdatamanagement/definition/flat-file)" 
@@ -75,7 +75,7 @@ database, most BI/Reporting tools support this type of database as a
 datasource and therefore its possible to generate reports using this method.
 
 There are however security implications, especially for QCIF managed ReDBox instances that are 
-hosted outside an institution’s network and therefore would require discussions regarding 
+hosted outside an institution's network and therefore would require discussions regarding 
 requirements and effort to configure to enable.
 
 ### Other options
