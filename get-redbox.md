@@ -5,6 +5,10 @@ title: Get ReDBox
 excerpt: Get ReDBox for your organisation
 ---
 
+
+
+
+
 For managed deployment services for Redbox, please
 [reach out to the Redbox team]({{ site.baseurl }}{% link contact.md %})
 for a presentation and demonstration of the platform.
@@ -19,7 +23,11 @@ However, ReDBox is a solution for any organisation that needs to manage and publ
 Have a look at your
 [options to get ReDBox]({{ site.baseurl }}{% link support.md %}).
 
+
 {% include latest_release.html %}
+
+
+
 
 ### ReDBox is an international solution
 

@@ -8,68 +8,57 @@ excerpt: ReDBox can seamlessly integrate with a range of institutional systems.
 ## Integration Options in ReDBox
 
 
-This document outlines the various integration options available in the ReDBox platform. 
-ReDBox is designed to seamlessly integrate with a range of institutional systems, enabling 
-efficient data management and enhanced research workflows.
-
-The integration options include a fully featured REST API, provisioner plugins for research 
-services, publishing integrations for disseminating data, and robust lookup data functionalities.
-These integrations help ensure that ReDBox can be tailored to meet the specific needs of your 
-institution, fostering better data accuracy, streamlined processes, and improved collaboration
-among researchers.
+ReDBox integrates seamlessly with a variety of institutional systems, ensuring efficient data management and 
+streamlined research workflows.
+These integration options include a fully featured REST API, provisioner plugins for research services, 
+publishing integrations for data dissemination, and powerful lookup data functionalities.
+Each of these integrations helps ensure ReDBox can be tailored to meet the specific needs of your institution, 
+fostering data accuracy, smoother processes, and enhanced collaboration among researchers.
 
 ### REST API
 
-ReDBox has a fully featured REST API that enables other systems to either modify information 
-within the platform or retrieve information from it. This API facilitates seamless integration 
-with various institutional systems, ensuring smooth data flow and interoperability.
+ReDBox's fully featured REST API allows other systems to modify or retrieve information within the platform.
+This ensures seamless integration with institutional systems, supporting smooth data flow and interoperability.
 
 #### Common Use Cases
 
-- **Exporting Data**: The export API can be utilized to retrieve data from ReDBox for integration 
-  with an institutional data lake or reporting system. This ensures that data within ReDBox 
-  can be consolidated with other institutional data for comprehensive analysis and reporting.
-- **Triggering Record Creation**: The API can trigger the creation of a record in ReDBox based on 
-  an action performed in another system. For example, an RDMP can be automatically created in 
-  ReDBox when a project grant is approved in the Research Information Management System (RIMS).
-  This automation helps in maintaining data consistency and reducing manual effort.
+- **Exporting Data**: Use the export API to retrieve data from ReDBox for integration with 
+  data lakes or reporting systems, enabling comprehensive institutional analysis.
+- **Automated Record Creation**: Trigger automatic record creation in ReDBox based on external system actions, 
+  such as generating an RDMP when a project grant is approved in an external system.
+  This reduces manual effort and ensures data consistency.
 
-### Provisioner Plugins
+### Provisioner Plugins for Research Services
 
-As part of ReDBox's workspace functionality, a variety of plugins are provided to provision 
-research services such as storage or other online tools. These plugins not only incentivize 
-researchers to complete their RDMPs but also help in linking the usage of these services to 
-specific projects. Several provisioner plugins are available for configuration:
+ReDBox provides a range of plugins to provision research services like storage and online tools.
+These plugins encourage RDMP completion and link service usage directly to projects, enhancing research workflows.
 
-- **ServiceNow**: Integrates with the [ServiceNow](https://www.servicenow.com/) platform to 
-  create and manage service requests.
-- **REDCap**: Facilitates the provisioning of [REDCap](https://www.project-redcap.org/) projects 
-  and resources.
-- **Terraform**: Automates the provisioning of infrastructure using 
-  [Terraform](https://www.terraform.io/).
-- **GitLab**: Manages [GitLab](https://about.gitlab.com/) repositories and resources.
-- **OMERO**: Integrates with [OMERO](https://www.openmicroscopy.org/omero/) for 
-  managing image data.
-- **LabArchives**: Connects with [LabArchives](https://www.labarchives.com/) for managing 
-  lab notebooks and research data.
+- **[ServiceNow](https://www.servicenow.com/)**: Seamlessly integrates for creating and managing service requests.
+- **[REDCap](https://www.project-redcap.org/)**: Provision REDCap projects and resources.
+- **[Terraform](https://www.terraform.io/)**: Automate infrastructure provisioning.
+- **[GitLab](https://about.gitlab.com/)**: Manage GitLab repositories and resources.
+- **[OMERO](https://www.openmicroscopy.org/omero/)**: Integrate with OMERO for image data management.
+- **[LabArchives](https://www.labarchives.com/)**: Connect with LabArchives for managing lab notebooks and research data.
 
 Additionally, many more plugins can be developed to extend the provisioning capabilities of 
 ReDBox, making it highly adaptable to various research needs and institutional requirements.
 
-<img src="{{ '/static/images/provisioner.jpg' | relative_url }}"
-class="img-fluid border rounded mx-auto d-block"
-alt="Diagram showing provisioners and example data flow.">
 
-### Publishing Integrations
+{% capture figure_src_provisioner %}{{ '/static/images/provisioner.jpg' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_provisioner
+max-width="800px"
+alt="Diagram showing provisioners and example data flow"
+caption="Diagram showing provisioners and example data flow"
+%}
 
-ReDBox aids in the publishing of data by providing configurable workflows for review and 
-integration with [Datacite Fabrica's](https://doi.datacite.org/) API for DOI minting.
-This facilitates the formal publication and dissemination of research data.
-ReDBox also supports pushing records to institutional publication search and discovery portals.
-The following portal systems are currently supported:
+### Publishing and Dissemination
 
-- **Figshare**: Integrates with [Figshare](https://figshare.com/) for publishing and managing 
-  research outputs.
+ReDBox simplifies data publishing with configurable workflows and supports pushing records to 
+institutional search and discovery portals, ensuring wide visibility for your research data.
+
+- **[Datacite Fabrica](https://doi.datacite.org/)**: Integration with the Datacite Fabrica API for DOI minting
+- **[Figshare](https://figshare.com/)**: Integrates with Figshare for publishing and managing research outputs.
 - **OAI-PMH Feed**: Supports any portals that can ingest records using the OAI-PMH protocol, 
   such as [Research Data Australia](https://researchdata.edu.au/).
 
@@ -77,19 +66,16 @@ Additional portal systems can be integrated with further development, ensuring b
 compatibility with various publication platforms and maximizing the visibility and impact 
 of research data.
 
-### Lookup Data
+### Lookup Data Integration
 
-One of ReDBox's powerful features is its ability to provide lookup functionality for 
-institutional information, ensuring that records are filled out accurately. ReDBox supports 
-two primary methods for integrating lookup data:
-
-- **API Integration**: ReDBox can integrate with the APIs of source institutional systems, allowing
-  users to search and suggest values directly from these systems. This real-time integration
-  ensures that the most up-to-date information is available for record creation and management.
-- **Ingesting Feeds**: ReDBox can ingest data feeds from source institutional systems using its REST 
-  API. Once ingested, the internal search APIs can be used to suggest values to users, 
-  facilitating accurate data entry and enhancing the overall user experience.
-
-These lookup capabilities help maintain data integrity and streamline the process of filling 
+ReDBox ensures accurate records with powerful lookup functionality for institutional information.
+These lookup capabilities help maintain data integrity and streamline the process of filling
 out records within ReDBox.
+
+- **API Integration**: Search and suggest values directly from source institutional systems in real time, 
+  ensuring up-to-date information.
+- **Ingesting Feeds**: Import data feeds from institutional systems and use internal search APIs to suggest 
+  values for accurate data entry.
+
+
 

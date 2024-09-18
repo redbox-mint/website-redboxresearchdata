@@ -7,83 +7,95 @@ excerpt: There are many options for creating reports in ReDBox
 
 ## ReDBox Reporting
 
-ReDBox has been designed to capture metadata from a variety of sources to help institutions 
-manage research data. While the intention of the system isn't to be a fully fledged 
-reporting/business intelligence (BI) tool, it's important for the system to be able to 
-provide some basic functionality as well as provide integration options for reporting tools 
-so that more complex reports can be created. This document outlines the options currently 
-available in ReDBox, how they can be used and any potential limitations with their approaches.
+ReDBox is designed to capture and manage metadata from various sources, 
+helping institutions efficiently manage research data.
+While ReDBox isn’t intended to serve as a full-scale reporting or business intelligence (BI) tool, 
+it offers basic reporting capabilities and integration options for more advanced reporting tools.
+
+Below, we outline the available reporting options in ReDBox and their functionalities.
 
 ## Features
 
 ### Exports
 
-ReDBox provides the ability to export record metadata by record type (e.g. RDMPs) and can 
-filter down to a date range based on when the record was modified. 
+ReDBox provides the ability to export record metadata by record type (e.g. RDMPs) and can
+filter down to a date range based on when the record was modified.
 The export functionality supports exporting to CSV or to JSON formats.
 
-<img src="{{ '/static/images/reporting-exports.png' | relative_url }}"
-class="img-fluid border"
-alt="Export record metadata by record type">
+{% capture figure_src_reporting_exports %}{{ '/static/images/reporting-exports.png' | relative_url }}{% endcapture %}
+{% include figure_image.html 
+src=figure_src_reporting_exports
+max-width="400px"
+alt="Export record metadata by record type"
+caption="Export record metadata by record type"
+%}
 
 
-The output produced contains all the metadata that is being captured in the system for each 
-record and there's no ability to choose which fields are exported though this can be done as 
-a post-processing task in the tool of your choice once the export is completed. 
-As the metadata stored in ReDBox is not 
-"[flat](https://www.techtarget.com/searchdatamanagement/definition/flat-file)" 
-but the CSV output is, some columns contain 
-JSON formatted strings to ensure all the metadata is present in the output. 
-
-In general, the CSV output is more useful for work within a spreadsheet tool such as Excel. 
-Most modern reporting/BI tools support JSON data sources and therefore the JSON output would 
-be recommended for use with those sorts of systems.
+- **CSV Exports**: Ideal for use in spreadsheet tools like Excel. 
+  The exported CSV file contains all available metadata for each record, 
+  though users cannot currently select specific fields during the export process.
+  You can refine the data post-export in your preferred tool.
+- **JSON Exports**: Recommended for modern BI tools that support JSON data sources.
+  Since ReDBox’s metadata isn’t flat, some columns in the CSV output contain JSON strings to preserve data integrity.
 
 ### REST API
 
-ReDBox includes a 
+ReDBox provides a fully-featured
 [REST API](https://redbox-mint.github.io/redbox-portal/additional-documentation/rest-api.html)
-that has endpoints that give systems the ability to retrieve record 
-metadata from ReDBox. A reporting/BI tool could use the APIs to query ReDBox for report generation 
-or simply as a machine to machine method to export metadata for importation into the system.
+with endpoints to retrieve metadata directly from the platform.
+Reporting or BI tools can use these APIs to query ReDBox for generating reports or 
+to extract metadata for import into other systems.
 
 ### Report Screens
 
-<img src="{{ '/static/images/reporting-report-screens.png' | relative_url }}" class="img-fluid border" alt="ReDBox includes some basic reporting functionality">
+ReDBox includes basic in-built reporting functionality, which allows users to:
 
-ReDBox includes some basic reporting functionality.
-With this functionality it is possible to configure a basic query, define filter parameters and 
-a basic table output. The functionality also provides the ability to export the output to a CSV.
-The functionality was developed early in the development of the system and has a number of 
-limitations currently:
+- Create simple queries
+- Define filter parameters
+- Generate basic table outputs
+- Export results to CSV
 
-- The source of the data used for exporting is the index built for searching. 
-  The search index is generated from the source database and can sometimes be out of sync and 
-  therefore what is displayed is not accurate. Ideally it should be using the database.
-- There are a very limited number of options as to what the table columns can output. It can be 
-  configured to generate HTTP links based on the data to support providing links to access records
-  but all other data cannot be formatted and will show exactly as it is in the data source.
-- While the table column output has the ability to generate a link that will be shown in the UI 
-  report preview, it is not possible to format the content of the CSV export at all and hence the 
-  HTML links will not be shown in the exports.
+{% capture figure_src_reporting_screens %}{{ '/static/images/reporting-report-screens.png' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_reporting_screens
+max-width="800px"
+alt="ReDBox includes some basic reporting functionality"
+caption="ReDBox includes some basic reporting functionality"
+%}
 
-### Connecting Business Intelligence (BI) tools to the database
+While useful for simple reporting needs, the current implementation has a few limitations:
+
+- **Data Source Issues**: The reports are generated from the search index, 
+  which may not always be in sync with the source database, leading to occasional inaccuracies.
+- **Limited Column Customization**: Table columns can be configured to display HTTP links for 
+  accessing records, but other data cannot be formatted.
+- **CSV Limitations**: The HTML links generated for reports in the UI do not appear in the
+  CSV exports, and no further customization is possible.
+
+### Integration with Business Intelligence (BI) tools
 
 ReDBox uses a 
 [MongoDB](https://www.mongodb.com/)
-database, most BI/Reporting tools support this type of database as a 
-datasource and therefore its possible to generate reports using this method.
+database, which is compatible with most BI and reporting tools as a data source.
+This makes it possible to generate complex reports using external tools.
 
-There are however security implications, especially for QCIF managed ReDBox instances that are 
-hosted outside an institution's network and therefore would require discussions regarding 
-requirements and effort to configure to enable.
+However, for QCIF-managed ReDBox instances hosted outside an institution’s network, 
+additional security configurations may be necessary, requiring further discussions on setup and access.
 
-### Other options
+### Advanced Customisation Other options
 
-In addition to the above, it is possible to customize ReDBox to the use case required by an 
-institution. This might include:
-- Sending data to a location within the institution. For example, outputting the metadata to 
-  institutional storage or system
-- Providing a custom endpoint to cater for the specific requirements of the system ingesting 
-  the content. For example, a system may require the content to be provided to it in a specific 
-  protocol and metadata format
+ReDBox can be customised to meet specific institutional reporting needs, 
+offering flexibility beyond the built-in features. Customization options include:
+
+- **Sending Data to Institutional Systems**: Metadata can be exported and sent to an institutional storage system or 
+  database, enabling further analysis or integration with local tools.
+- **Custom Endpoints**: Create tailored endpoints to serve specific data requirements, such as outputting 
+  metadata in a custom format or protocol for external system ingestion.
+
+## Summary
+
+ReDBox offers a variety of basic and advanced reporting options, 
+from direct exports and in-platform reports to full integration with external BI tools.
+While the built-in reporting features are suitable for straightforward data analysis, 
+the platform’s flexibility and customization options allow for integration with more 
+sophisticated reporting systems to meet your institution’s needs.

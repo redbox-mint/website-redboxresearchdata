@@ -17,4 +17,4 @@ PUB_DATE=$(jq -r '.published_at | fromdateiso8601 | strftime("%a, %d %B %Y")' "$
 # e.g. The [most recent ReDBox version is <tag_name>](<html_url>) released on [<published_at>].
 # e.g. The [most recent ReDBox version is *v3.6*](https://github.com/redbox-mint/redbox-portal/releases/tag/v3.6) released on 01 May 2024.
 
-echo "The [most recent ReDBox version is *${VERSION}*](${URL}) released on ${PUB_DATE}." > "${HTML_FILE}"
+echo "The <a href='${URL}'>most recent ReDBox version is <strong>${VERSION}</strong></a> released on ${PUB_DATE}." > "${HTML_FILE}"

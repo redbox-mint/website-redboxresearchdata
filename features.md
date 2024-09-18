@@ -66,19 +66,6 @@ Research data management planning is now encouraged in all Australian Universiti
 ReDBox provides customisable forms and workflows to assist researchers, supervisors and administrators in creating,
 tracking and approving DMPs.
 
-## ReDBox Lite
-
-ReDBox Lite is a simplified metadata management version of ReDBox
-It supports standardized metadata record types, and has reduced scope for integration with other systems.
-It does not require advanced administration techniques or application programming skills.
-ReDBox Lite assists research institutions and communities to meet their metadata management requirements.
-
-QCIF offers ReDBox Lite as a fully hosted Managed Service, providing a cost-effective,
-fuss free alternative to installing and maintaining your own infrastructure.
-We can host ReDBox Lite on our
-[QRIScloud infrastructure](https://www.qriscloud.org.au/)
-or on public cloud infrastructure.
-
 ## Name authority and vocabulary service
 
 The Mint is a name-authority and vocabulary service that complements ReDBox.

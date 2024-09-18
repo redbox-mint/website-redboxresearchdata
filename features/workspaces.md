@@ -7,46 +7,40 @@ excerpt: Workspaces provide researchers access to external services from ReDBox
 
 ## Workspaces in ReDBox
 
-Workspaces in ReDBox are a record type that describes a service 
-a researcher is using in their research project.
+Workspaces in ReDBox provide seamless access to external services that researchers need for their projects.
 
-This feature integrates with these services through a provisioner 
-framework to automate the provisioning process.
+By leveraging ReDBox’s provisioner framework, workspaces automate the provisioning process, reducing manual 
+effort and ensuring smooth integration with various research tools and services.
 
-### Purpose and Benefits
+Some of the benefits of workspace integration are:
 
-- Incentivizes the creation of Research Data Management Plans (RDMPs)
-- Streamlines the provisioning process with pre-filled information
+- **Encourages RDMP Creation**: Simplifies the process of creating Research Data Management Plans (RDMPs) 
+  by integrating service provisioning with pre-filled information.
+- **Automated Provisioning**: Streamlines service access by automating the provisioning process, 
+  saving time and reducing errors.
 
-### Accessing the Workspaces Feature
+The Workspaces feature can be accessed by:
 
-1. Navigate to the RDMP Form: Access the RDMP form within ReDBox.
-2. Locate the Workspaces Tab: Find the tab listing all configured workspaces.
+1. **Navigate to the RDMP Form**: Access the RDMP form within ReDBox.
+2. **Locate the Workspaces Tab**: Find the tab listing all configured workspaces.
 
-## Key Functionalities
+## Key Features
 
-- **Pre-Filled Information**: Saves time by using data from the RDMP to fill in the workspace form.
-- **Custom Fields**: Enter specific details required for the service being provisioned.
-
-### Customization Options
-
-- **Adjusting Storage Size**: For storage-related workspaces, specify the required storage size.
-- **Adding Additional Details**: Include any additional information relevant to the workspace.
-
-### Linkage Between RDMP and Workspace
-
-- **Associated Workspaces**: The linkage between the RDMP and the workspace allows 
-  displaying associated workspaces in the RDMP record.
-- **Workspaces Dashboard**: Researchers can view all their workspaces and the related 
-  RDMP through a dedicated dashboard.
-
-### Pushing RDMP Metadata to Services
-
-- **Provisioning Framework**: If the service being provisioned supports it, 
-  the provisioning framework can push RDMP metadata to the service to assist 
-  maintainers of the service.
+- **Pre-Filled Information**: Automatically pulls data from the RDMP to fill out the workspace form, 
+  speeding up the provisioning process.
+- **Custom Fields**: Enter specific details required for the services being provisioned, 
+  such as custom configurations or additional information.
+- **Adjusting Storage Size**: For storage-related workspaces, easily specify the required storage capacity.
+- **Adding Additional Details**: Include any other relevant information needed to complete the workspace setup.
+- **Associated Workspaces**: The integration between RDMP and workspaces allows associated workspaces to be 
+  displayed within the RDMP record.
+- **Workspaces Dashboard**: Researchers can track and manage all their workspaces, 
+  alongside the corresponding RDMPs, through a user-friendly dashboard.
+- **Provisioning Framework**: When supported, the provisioning framework can push relevant 
+  RDMP metadata to external services, helping service maintainers by providing essential project context.
 
 ## Using the Workspaces Feature
+
 
 1. Creating an RDMP:
 
@@ -58,28 +52,39 @@ framework to automate the provisioning process.
     1. In the RDMP form, navigate to the Workspaces tab.
     2. Select the desired workspace from the list.
 
-   <img src="{{ '/static/images/workspaces-open.png' | relative_url }}"
-   class="img-fluid border"
-   alt="Select the desired workspace from the list">
-
 3. Filling Out the Workspace Form:
 
     1. Review the pre-filled information from the RDMP.
     2. Enter any additional required information 
        (e.g., storage size for a research data storage workspace).
-
-    <img src="{{ '/static/images/workspaces-additional-info.png' | relative_url }}"
-    class="img-fluid border"
-    alt="Enter any additional required information for the workspace">
-
     3. Save the form to initiate the provisioning process.
     4. View details about the status of the workspace either in the 
        RDMP or the workspaces dashboard
 
-    <img src="{{ '/static/images/workspaces-list.png' | relative_url }}"
-    class="img-fluid border"
-    alt="View details about the status of the workspaces">
 
+{% capture figure_src_workspaces_open %}{{ '/static/images/workspaces-open.png' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_workspaces_open
+max-width="800px"
+alt="Selecting and Opening a Workspace: Select the desired workspace from the list"
+caption="Selecting and Opening a Workspace: Select the desired workspace from the list"
+%}
+
+{% capture figure_src_workspaces_info %}{{ '/static/images/workspaces-additional-info.png' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_workspaces_info
+max-width="800px"
+alt="Filling Out the Workspace Form: Enter any additional required information for the workspace"
+caption="Filling Out the Workspace Form: Enter any additional required information for the workspace"
+%}
+
+{% capture figure_src_workspaces_list %}{{ '/static/images/workspaces-list.png' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_workspaces_list
+max-width="800px"
+alt="Filling Out the Workspace Form: View details about the status of the workspaces"
+caption="Filling Out the Workspace Form: View details about the status of the workspaces"
+%}
 
 ## Case Study: ServiceNow Provisioner
 

@@ -17,13 +17,14 @@ their research data as well as the eResearch infrastructure and services used to
 ReDBox supports the DLCF by assisting users to provision and manage storage infrastructure,
 then allowing users to extract manifests of data back into ReDBox and publishing the data files 
 alongside the data collection metadata.
-alongside the data collection metadata.
 
-<img src="{{ '/static/images/curationlifecycle.png' | relative_url }}" 
-class="img-fluid border" 
-alt="How ReDBox supports the DCC Curation Life Cycle">
-
-How ReDBox supports the DCC Curation Life Cycle
+{% capture figure_src_curation_lifecycle %}{{ '/static/images/curationlifecycle.png' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_curation_lifecycle
+max-width="800px"
+alt="How ReDBox supports the DCC Curation Life Cycle"
+caption="How ReDBox supports the DCC Curation Life Cycle"
+%}
 
 ## The Research Activity Portal and RAiDs
 
@@ -63,11 +64,13 @@ functions, including:
 Future Provisioner development is expected to support many more useful processes, including data archiving 
 and data publication.
 
-<img src="{{ '/static/images/provisioner.jpg' | relative_url }}"
-class="img-fluid border"
-alt="The UTS Provisioner links services to their Stash research data management platform via workspaces">
-
-The UTS Provisioner links services to their Stash research data management platform via workspaces
+{% capture figure_src_provisioner %}{{ '/static/images/provisioner.jpg' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_provisioner
+max-width="800px"
+alt="The Provisioner links services to their research data management platform via workspaces"
+caption="The Provisioner links services to their research data management platform via workspaces"
+%}
 
 ## ReDBox and Data Harvesting
 
@@ -78,12 +81,6 @@ manifest of the files, and harvest the manifest (and optionally the data files) 
 research data files under ReDBox and institutional control. The files and metadata can then be published for 
 open access.
 
-## ReDBox in the Cloud
-
-With ReDBox, QCIF are using a new web development framework that will allow QCIF to move beyond hosting individual
-ReDBox Lite instances to providing the full ReDBox functionality in the Cloud using the Software as a Service (SaaS)
-model. The Research Activity Portal can already be extended to provide the Data Management Planning Tool for institutions.
-
 ## The Benefits of ReDBox as a Research Data Management Platform
 
 Through this approach researchers will have ReDBox as a single point of access to key elements of the DLCF, 
@@ -91,9 +88,10 @@ including planning, provisioning, data harvesting and publishing. It will give i
 into how researchers manage and publish their data while providing assurances that researcher practices conform
 to Australian standards and expectations.
 
-<img src="{{ '/static/images/rbdlc.jpg' | relative_url }}"
-class="img-fluid border"
-alt="The UTS Provisioner links services to their Stash research data management platform via workspaces">
-
-
-ReDBox is a complete data management system for supporting the Research Data Life Cycle Framework
+{% capture figure_src_rbdlc %}{{ '/static/images/rbdlc.jpg' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_rbdlc
+max-width="800px"
+alt="ReDBox is a complete data management system for supporting the Research Data Life Cycle Framework"
+caption="ReDBox is a complete data management system for supporting the Research Data Life Cycle Framework"
+%}
