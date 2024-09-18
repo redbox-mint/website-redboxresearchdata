@@ -60,16 +60,3 @@ research data management solutions.
 
 Today, ReDBox is a testament to the power of **open collaboration** and community-driven innovation, 
 with a growing user base and an ever-expanding feature set.
-
-## Software libraries
-
-Some of the key software libraries that make ReDBox possible:
-
-TODO
-
-(e.g.)
-
-- Angular
-- Sails.js
-- Node.js
-- Ubuntu
