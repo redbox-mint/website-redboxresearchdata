@@ -11,6 +11,14 @@ The flexible ReDBox form framework is designed to seamlessly adapt to the unique
 Whether you need simple metadata capture or complex, multi-step workflows, ReDBox’s customizable forms provide a 
 versatile solution that empowers your data management processes.
 
+{% capture figure_src_configurable_form_example %}{{ '/static/images/configurable-form-example.png' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_configurable_form_example
+max-width="800px"
+alt="The flexible ReDBox form framework can adapt to organisation requirements."
+caption="The flexible ReDBox form framework can adapt to organisation requirements."
+%}
+
 ### Key Features
 
 - **Tailored Metadata Fields**: Create, modify, or remove fields to align with the specific data and 
