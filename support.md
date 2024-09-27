@@ -63,7 +63,7 @@ We make regular releases to continue our commitment to delivering cutting-edge t
 
 ## Project Services
 
-ReDBox is proudly developed and maintained by QCIF's Enterprise Services Group, 
+ReDBox is proudly developed and maintained by QCIF's Enterprise Solutions Group, 
 a dedicated team of software engineering professionals with deep expertise in 
 software development and integration.
 We provide a wide range of project services to ReDBox clients, QCIF's member universities, 
