@@ -1,9 +1,17 @@
-<footer class="container border-top mt-5">
-    <p class="float-end">
-        <a href="#top">Back to top</a>
+<footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mt-5">
+    <p class="col-md-4 mb-0 text-body-secondary">
+        © 2024
+        <a href="https://www.qcif.edu.au">Queensland Cyber Infrastructure Foundation</a>
     </p>
-    <p>
-        &copy; 2024 <a href="https://www.qcif.edu.au">Queensland Cyber Infrastructure Foundation</a> &middot;
-        <a href="{{ site.baseurl }}{% link contact.md %}">Contact</a>
-    </p>
+
+    <a href="https://www.qcif.edu.au"
+       class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img style="width:10em;" src="{{ '/static/images/qcif-logo.png' | relative_url }}">
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="{{ site.baseurl }}{% link support.md %}" class="nav-link px-2 text-body-secondary">Support</a></li>
+        <li class="nav-item"><a href="{{ site.baseurl }}{% link contact.md %}" class="nav-link px-2 text-body-secondary">Contact</a></li>
+        <li class="nav-item"><a href="#top" class="nav-link px-2 text-body-secondary">Back to top</a></li>
+    </ul>
 </footer>

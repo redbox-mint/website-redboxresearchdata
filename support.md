@@ -69,6 +69,14 @@ software development and integration.
 We provide a wide range of project services to ReDBox clients, QCIF's member universities, 
 national research institutions, government agencies, and industry partners.
 
+{% capture figure_src_enterprise_solutions %}{{ '/static/images/qcif-enterprise-solutions.png' | relative_url }}{% endcapture %}
+{% include figure_image.html
+src=figure_src_enterprise_solutions
+max-width="600px"
+alt="QCIF Enterprise Solutions team"
+caption="QCIF Enterprise Solutions team"
+%}
+
 Our team specialises in delivering custom ReDBox solutions tailored to the unique needs of your organisation.
 Whether it's customization, integration, or implementing new features, we offer comprehensive support 
 through all phases of the project lifecycle—from scoping and development to testing and deployment.
