@@ -28,6 +28,7 @@ For more extensive or complicated changes - set up GitHub Pages to test changes 
 
 1. Set up [rvm](https://github.com/rvm/ubuntu_rvm) on your machine or in a VM or docker container.
 2. Set up the [GitHub Pages gem](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll).
+   Use the scripts in `.support` to install the dependencies and build the static site.
 3. Make content or structural changes.
-4. Run the site locally to see that the changes are ok.
+4. Run the site locally to see that the changes are ok. Use the script `.support/local_jekyll_server.sh`.
 5. Commit and push the change to the default branch.
