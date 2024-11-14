@@ -1,8 +1,10 @@
 ---
 layout: page_general
-permalink: /credits
-title: Credits
+permalink: /acknowledgements
+title: Acknowledgements
 excerpt: People and groups who have contributed to ReDBox
+redirect_from:
+  - /credits
 ---
 
 We are grateful to the many people and organizations whose contributions have helped shape the development of 
