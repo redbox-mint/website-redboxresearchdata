@@ -3,6 +3,12 @@
 The source code for the 
 [ReDBox public information website](https://redbox-mint.github.io/website-redboxresearchdata/).
 
+This is the staging website.
+
+Test changes here first.
+
+Once things lok good, copy the changes to the [production website](https://github.com/redbox-mint/redbox-mint.github.io).
+
 ## Overview
 
 - Uses [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://docs.github.com/en/pages).
