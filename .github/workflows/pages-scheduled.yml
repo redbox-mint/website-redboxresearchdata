@@ -44,7 +44,7 @@ jobs:
         run: .support/generate_latest_release_info.sh
 
       # Update the static website files
-      - uses: actions/setup-node@v4.1.0
+      - uses: actions/setup-node@v4.2.0
         with:
           node-version: 20
           cache: 'npm'
