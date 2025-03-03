@@ -18,6 +18,6 @@ MSG="The <a href='${URL}' target='_blank'>most recent ReDBox version is <strong>
 # e.g. The [most recent ReDBox version is <tag_name>](<html_url>) released on [<published_at>].
 # e.g. The [most recent ReDBox version is *v3.6*](https://github.com/redbox-mint/redbox-portal/releases/tag/v3.6) released on 01 May 2024.
 
-echo "Generated text: ${MSG}"
+echo "Generated text to '${HTML_FILE}': ${MSG}"
 
 echo "${MSG}" > "${HTML_FILE}"
