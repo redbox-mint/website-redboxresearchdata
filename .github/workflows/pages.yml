@@ -54,7 +54,7 @@ jobs:
         name: Create latest ReDBox release details if not cached
         run: .support/generate_latest_release_info.sh
 
-      - uses: actions/setup-node@v4.1.0
+      - uses: actions/setup-node@v4.2.0
         with:
           node-version: 20
           cache: 'npm'
