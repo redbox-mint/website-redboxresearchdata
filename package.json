@@ -9,7 +9,7 @@
   "author": "",
   "license": "Creative Commons Attribution 3.0 Unported",
   "dependencies": {
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.5",
     "bootstrap-icons": "^1.11.3"
   }
 }
