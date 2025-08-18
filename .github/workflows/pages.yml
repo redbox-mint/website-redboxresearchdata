@@ -82,7 +82,7 @@ jobs:
 
       - name: Upload artifact
         if: ${{ ! startsWith(github.ref, 'refs/heads/dependabot') }}
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v4.0.0
 
   # Deployment job
   deploy:
